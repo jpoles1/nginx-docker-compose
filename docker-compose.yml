@@ -1,0 +1,23 @@
+version: '2'
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: production_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - "./ssl:/etc/ssl"
+      - "./fileserve:/var/www/html"
+    ports:
+      - 80:80
+      - 443:443
+  certbot:
+    build: ./certbot
+    volumes:
+      - "./letsencrypt:/etc/letsencrypt"
+    volumes_from:
+      - nginx
+      
+
+#Adapted from:
+#https://reprage.com/post/SSL-with-letsencrypt-nginx-and-docker
+#https://dev.to/domysee/setting-up-a-reverse-proxy-with-nginx-and-docker-compose-29jg
