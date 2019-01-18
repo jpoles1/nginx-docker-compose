@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER jpoles1
 
-ADD crontab /etc/cron.d/certbot-cron
+COPY crontab /etc/cron.d/certbot-cron
 RUN chmod 0644 /etc/cron.d/certbot-cron
 RUN touch /var/log/cron.log
 
