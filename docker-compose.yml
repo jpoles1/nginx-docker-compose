@@ -17,6 +17,9 @@ services:
       - "./letsencrypt:/etc/letsencrypt"
       - "./cron.log:/var/log/cron.log"      
 
-#Adapted from:
+#References:
 #https://reprage.com/post/SSL-with-letsencrypt-nginx-and-docker
 #https://dev.to/domysee/setting-up-a-reverse-proxy-with-nginx-and-docker-compose-29jg
+#https://diarmuid.ie/blog/using-nginx-as-a-reverse-proxy-for-developing-microservice-with-docker-compose/
+#https://github.com/nanoninja/docker-nginx-php-mysql/blob/master/docker-compose.yml
+#https://miki725.com/docker/crypto/2017/01/29/docker+nginx+letsencrypt.html
