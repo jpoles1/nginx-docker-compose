@@ -1,0 +1,1 @@
+docker exec -it certbot-nginx bash -c "nginx -s reload"
