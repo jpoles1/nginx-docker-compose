@@ -21,3 +21,8 @@ To create an HTTPS certificate: run `./certbot-add.sh` and follow the prompts.
 
 To manually renew certificates: run `./certbot-renew.sh`
   - Certificates should be automatically renewed, with checks run daily via crontab.
+  
+  
+### Other Info:
+
+After editing the HTTPS certificate crontab file, you will have to rebuild the container using: `docker-compose build --no-cache`
